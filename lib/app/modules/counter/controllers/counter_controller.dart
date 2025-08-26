@@ -5,7 +5,7 @@ class CounterController extends GetxController {
   RxInt hitung = 20.obs;
 
   void increment() {
-    if (hitung >= 100) {
+    if (hitung.value >= 100) {
       Get.snackbar(
         "Stop",
         "Angka Tidak boleh lebih dari 100",
@@ -13,13 +13,12 @@ class CounterController extends GetxController {
         icon: Icon(Icons.warning, color: Colors.white),
         colorText: Colors.white,
       );
-    } else {
-      hitung++;
     }
+      hitung.value++;
   }
 
   void decrement() {
-    if (hitung < 1) {
+    if (hitung.value < 1) {
        Get.snackbar(
         "Stop",
         "Counter tidak boleh kurang dari 0",
@@ -27,8 +26,7 @@ class CounterController extends GetxController {
         icon: Icon(Icons.warning, color: Colors.white),
         colorText: Colors.white,
       );
-    } else {
-      hitung--;
-    }
+    } 
+      hitung.value--;
   }
 }

@@ -21,9 +21,11 @@ class CounterView extends GetView<CounterController> {
               ),
             ),
             SizedBox(height: 5),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+             
                 ElevatedButton(
                   onPressed: controller.increment,
                   child: Text('+'),
