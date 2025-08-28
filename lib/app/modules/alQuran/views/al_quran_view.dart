@@ -5,6 +5,7 @@ import 'package:learn_getx/app/modules/alQuran/views/quran_detail_view.dart';
 
 class QuranView extends GetView<AlQuranController> {
   QuranView({Key? key}) : super(key: key);
+  final AlQuranController controller = Get.put(AlQuranController());
 
   @override
   Widget build(BuildContext context) {
