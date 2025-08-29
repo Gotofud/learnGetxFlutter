@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:learn_getx/app/modules/post/views/create_post_view.dart';
 
 import '../middleware/auth_middleware.dart';
 import '../modules/alQuran/bindings/al_quran_binding.dart';
@@ -75,6 +76,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_POSTS,
+      page: () => CreatePostView(),
+      binding: PostBinding(),
     ),
   ];
 }
